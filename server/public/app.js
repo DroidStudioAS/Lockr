@@ -53,8 +53,8 @@ socket.on("message", (data) => {
             ? 'post__header--user'
             : 'post__header--reply'
             }">
-        <span class="post__header--name">${name}</span> 
-        <span class="post__header--time">${time}</span> 
+        <span class="post__header--name ${name!==nameInput.value ? 'post__header--name--reply' : 'post__header--name'}">${name}</span> 
+        <span class="post__header--time ${name!==nameInput.value ? 'post__header--time--reply' : 'post__header--time'}">${time}</span> 
         </div>
         <div class="post__text">${text}</div>`
     } else {
